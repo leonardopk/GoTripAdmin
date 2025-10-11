@@ -6,6 +6,9 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 html {
   @include mat.theme((
     color: (
@@ -32,8 +35,22 @@ body {
 
   // Reset the user agent margin.
   margin: 0;
+
+  font-family: "Montserrat", sans-serif;
 }
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: "Montserrat", sans-serif; }
+
+mat-sidenav .mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.b-radius-10 {
+  border-radius: 10px !important;
+}

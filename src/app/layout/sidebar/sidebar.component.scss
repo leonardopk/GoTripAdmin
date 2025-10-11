@@ -3,11 +3,35 @@ mat-sidenav-container {
   width: 100vw;
 }
 
-mat-sidenav, mat-sidenav-content {
+.logo {
+  width: 200px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+mat-sidenav {
   padding: 16px;
 }
 
 mat-sidenav {
-  background-color: blueviolet;
+  background-color: rgba(137, 43, 226, 0.253);
   width: 300px;
+  display: flex;
+}
+
+h5 {
+  padding-left: 16px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+mat-list-item {
+  margin-bottom: 20px;
+}
+
+mat-list-item:hover {
+  background-color: aquamarine;
+  cursor: pointer;
 }

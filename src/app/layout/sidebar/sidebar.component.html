@@ -1,34 +1,52 @@
 <!-- SIDENAV ANGULAR MATERIAL -->
 <mat-sidenav-container>
-    <mat-sidenav [(opened)]="sidenavOpened" mode="side">Item Menu</mat-sidenav>
-    <mat-sidenav-content>Conteúdo aqui</mat-sidenav-content>
-</mat-sidenav-container>
 
-<!--
-<div class="logo">
-    <img src="/images/logo.png" alt="">
-</div>
-<h5>Menu</h5>
-<ul class="nav-list">
-    <li>
-        <span class="menu-item-icon"></span>
-        <span class="menu-item-text">Usuários</span>
-    </li>
-    <li>
-        <span class="menu-item-icon"></span>
-        <span class="menu-item-text">Clientes</span>
-    </li>
-    <li>
-        <span class="menu-item-icon"></span>
-        <span class="menu-item-text">Atividades</span>
-    </li>
-    <li>
-        <span class="menu-item-icon"></span>
-        <span class="menu-item-text">Pedidos</span>
-    </li>
-    <li>
-        <span class="menu-item-icon"></span>
-        <span class="menu-item-text">Operacionais</span>
-    </li>
-</ul>
--->
+    <mat-sidenav [(opened)]="sidenavOpened" mode="side">
+        
+        <div class="logo">
+            <img src="/images/logo.png" alt="">
+        </div>
+
+        <h5>MENU</h5>
+        
+        <mat-list>
+            <mat-list-item class="b-radius-10">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
+            </mat-list-item>
+            
+            <mat-list-item class="b-radius-10">
+                <mat-icon>list_alt_check</mat-icon>
+                <span>Operacionais</span>
+            </mat-list-item>
+
+            <mat-list-item class="b-radius-10">
+                <mat-icon>shopping_cart</mat-icon>
+                <span>Pedidos</span>
+            </mat-list-item>
+
+            <mat-list-item class="b-radius-10">
+                <mat-icon>motorcycle</mat-icon>
+                <span>Atividades</span>
+            </mat-list-item>
+
+            <mat-list-item class="b-radius-10">
+                <mat-icon>group</mat-icon>
+                <span>Clientes</span>
+            </mat-list-item>
+            
+            <mat-list-item class="b-radius-10">
+                <mat-icon>manage_accounts</mat-icon>
+                <span>Usuários</span>
+            </mat-list-item>
+            
+            <mat-list-item class="b-radius-10">
+                <mat-icon>info</mat-icon>
+                <span>Meus dados</span>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>Conteúdo aqui</mat-sidenav-content>
+    
+</mat-sidenav-container>
