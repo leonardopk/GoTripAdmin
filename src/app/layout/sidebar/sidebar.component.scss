@@ -6,6 +6,8 @@ mat-sidenav-container {
 .logo {
   width: 200px;
   cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .logo img {
@@ -13,26 +15,29 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  padding: 16px;
-}
-
-mat-sidenav {
-  background-color: rgba(137, 43, 226, 0.253);
+  background-color: white;
   width: 300px;
+  padding: 16px;
   display: flex;
+  border-right: 1px solid rgba(110, 110, 110, 0.192);
 }
 
 h5 {
   padding-left: 16px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 0;
 }
 
 mat-list-item {
   margin-bottom: 20px;
+  color: #798294;
 }
 
 mat-list-item:hover {
-  background-color: aquamarine;
+  background-color: #f2f4f7;
   cursor: pointer;
+}
+
+mat-sidenav-content {
+  background-color: #f9fafb;
 }

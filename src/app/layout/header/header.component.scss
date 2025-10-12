@@ -1,8 +1,9 @@
 header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+    border-bottom: 1px solid rgba(110, 110, 110, 0.192);
     height: 70px;
     display: flex;
     align-items: center;
+    background-color: white;
 }
 
 .toggle-menu-cont {
@@ -11,5 +12,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    border: 1px solid rgba(110, 110, 110, 0.192);
+    margin-left: 30px;
+}
+
+.toggle-menu-cont:hover {
+    
+    background-color: #f2f4f7;
+    cursor: pointer;
 }

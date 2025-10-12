@@ -49,6 +49,13 @@ mat-sidenav .mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
   gap: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  color: #344054;
+  font-size: 14px;
+}
+
+mat-sidenav-container .mat-drawer.mat-sidenav.mat-drawer-opened.mat-drawer-side {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .b-radius-10 {
