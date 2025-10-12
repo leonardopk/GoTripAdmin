@@ -1,52 +1,53 @@
-<!-- SIDENAV ANGULAR MATERIAL -->
 <mat-sidenav-container>
 
     <mat-sidenav [(opened)]="sidenavOpened" mode="side">
         
-        <div class="logo">
+        <div class="logo" routerLink="/">
             <img src="/images/logo.png" alt="">
         </div>
 
         <h5>MENU</h5>
         
         <mat-list>
-            <mat-list-item class="b-radius-10">
+            <mat-list-item class="b-radius-10" routerLink="/">
                 <mat-icon>home</mat-icon>
                 <span>Home</span>
             </mat-list-item>
             
-            <mat-list-item class="b-radius-10">
+            <mat-list-item class="b-radius-10" routerLink="/operationals">
                 <mat-icon>list_alt_check</mat-icon>
                 <span>Operacionais</span>
             </mat-list-item>
 
-            <mat-list-item class="b-radius-10">
+            <mat-list-item class="b-radius-10" routerLink="/bookings">
                 <mat-icon>shopping_cart</mat-icon>
                 <span>Pedidos</span>
             </mat-list-item>
 
-            <mat-list-item class="b-radius-10">
+            <mat-list-item class="b-radius-10" routerLink="/activities">
                 <mat-icon>motorcycle</mat-icon>
                 <span>Atividades</span>
             </mat-list-item>
 
-            <mat-list-item class="b-radius-10">
+            <mat-list-item class="b-radius-10" routerLink="/customers">
                 <mat-icon>group</mat-icon>
                 <span>Clientes</span>
             </mat-list-item>
             
-            <mat-list-item class="b-radius-10">
+            <mat-list-item class="b-radius-10" routerLink="/users">
                 <mat-icon>manage_accounts</mat-icon>
                 <span>Usuários</span>
             </mat-list-item>
             
-            <mat-list-item class="b-radius-10">
+            <mat-list-item class="b-radius-10" routerLink="/profile">
                 <mat-icon>info</mat-icon>
                 <span>Meus dados</span>
             </mat-list-item>
         </mat-list>
     </mat-sidenav>
 
-    <mat-sidenav-content>Conteúdo aqui</mat-sidenav-content>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
     
 </mat-sidenav-container>

@@ -19,6 +19,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { OperationalsFormComponent } from './pages/operationals/form/operationals-form.component';
+import { OperationalsListComponent } from './pages/operationals/list/operationals-list.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { RouterModule } from '@angular/router';
     UsersListComponent,
     UsersFormComponent,
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProfileComponent,
+    OperationalsFormComponent,
+    OperationalsListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
