@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ICustomer } from '../../../models/Interfaces/icustomer';
+import { CustomerService } from '../../../services/customer.service';
 
 @Component({
   selector: 'app-customers-list',
@@ -6,8 +8,12 @@ import { Component, Input } from '@angular/core';
   templateUrl: './customers-list.component.html',
   styleUrl: './customers-list.component.scss'
 })
-export class CustomersListComponent {
-  @Input({ required: true }) title!: string;
-  @Input({ required: true }) buttonText!: string;
-  @Input({ required: true }) buttonRoute!: string;
+export class CustomersListComponent implements OnInit {
+  customers: ICustomer[] = [];
+
+  constructor (private customerService: CustomerService) {}
+
+  ngOnInit(): void {
+    this.customers = this.customerService.getCustomers();
+  }
 }
