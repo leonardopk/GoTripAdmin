@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IColumn } from '../../models/Interfaces/IColumn';
+import { IColumn } from '../../models/Interfaces/icolumn';
 
 @Component({
   selector: 'app-list-view',
