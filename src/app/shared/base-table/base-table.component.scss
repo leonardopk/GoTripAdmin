@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+}
+
+.btn-actions-container {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+}
+
+.btn-actions-container mat-icon {
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actions-th {
+    text-align: end;
+}
+
+.btn-edit {
+    background-color: #FE9A00;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #e28800;
+}
+
+.btn-remove {
+    background-color: #FB2C36;
+    color: white;
+}
+
+.btn-remove:hover {
+    background-color: #d82730;
+}

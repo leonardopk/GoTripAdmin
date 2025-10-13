@@ -1,1 +1,9 @@
-<p>activities-list works!</p>
+<app-list-view 
+    pageTitle="Atividades" 
+    btnText="Nova Atividade" 
+    [dataListSource]="activities" 
+    [nameColums]="[
+        {field: 'name', label: 'Nome'},
+        {field: 'price', label: 'Valor'},
+    ]"
+></app-list-view>

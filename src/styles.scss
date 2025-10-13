@@ -43,6 +43,7 @@ body {
 html, body { height: 100%; }
 body { margin: 0; font-family: "Montserrat", sans-serif; }
 
+// Barra lateral Angular Material
 mat-sidenav .mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
   display: flex !important;
   align-items: center !important;
@@ -58,6 +59,32 @@ mat-sidenav-container .mat-drawer.mat-sidenav.mat-drawer-opened.mat-drawer-side 
   border-bottom-right-radius: 0;
 }
 
+// Tabela Angular Material
+@include mat.table-overrides((
+    background-color: white,
+    header-headline-color: black,
+    header-headline-font: "Montserrat",
+    header-headline-weight: 600,
+    row-item-label-text-font: "Montserrat",
+    row-item-label-text-weight: 400,
+    row-item-label-text-line-height: 60px,
+    row-item-outline-color: rgba(110, 110, 110, 0.192)
+));
+
+// Criados
 .b-radius-10 {
   border-radius: 10px !important;
+}
+
+.b-radius-20 {
+  border-radius: 20px !important;
+}
+
+.btn-base {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  border: none;
 }

@@ -23,6 +23,10 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { OperationalsFormComponent } from './pages/operationals/form/operationals-form.component';
 import { OperationalsListComponent } from './pages/operationals/list/operationals-list.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatFormField } from '@angular/material/form-field';
+import { MatLabel } from '@angular/material/form-field';
+import { BaseTableComponent } from './shared/base-table/base-table.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,8 @@ import { HomeComponent } from './pages/home/home.component';
     ProfileComponent,
     OperationalsFormComponent,
     OperationalsListComponent,
-    HomeComponent
+    HomeComponent,
+    BaseTableComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,10 @@ import { HomeComponent } from './pages/home/home.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    MatTableModule,
+    MatFormField,
+    MatLabel
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

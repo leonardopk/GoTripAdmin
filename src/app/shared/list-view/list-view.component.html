@@ -1,1 +1,37 @@
-<p>list-view works!</p>
+<div class="cont-container">
+    <div class="page-title-container">
+        <h1>{{ pageTitle }}</h1>
+        <ul>
+            <li routerLink="/">
+                <span>Home</span>
+                <mat-icon>arrow_forward_ios</mat-icon>
+            </li>
+            <li>
+                <span>{{ pageTitle }}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="list-area-container b-radius-20">
+        <div class="row-1">
+            <div class="list-title">
+                <h3>Lista de {{ pageTitle }}</h3>
+            </div>
+            <div class="btn-new-cont">
+                @if (showAddBtn) {
+                    <button  class="b-radius-10 btn-base">
+                        <mat-icon>add</mat-icon>
+                        {{ btnText }}
+                    </button>
+                }
+            </div>
+        </div>
+        <div class="row-2">
+            <input type="text" placeholder="Buscar por {{ pageTitle }}" class="b-radius-10">
+        </div>
+        <div class="row-3">
+
+            <app-base-table [dataList]="dataListSource" [displayedColumns]="nameColums"></app-base-table>
+
+        </div>
+    </div>
+</div>

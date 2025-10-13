@@ -48,7 +48,9 @@
 
     <mat-sidenav-content>
         <app-header (menuToggled)="toggleSidenav()"></app-header>
-        <router-outlet></router-outlet>
+        <div class="content-container">
+            <router-outlet></router-outlet>
+        </div>
     </mat-sidenav-content>
     
 </mat-sidenav-container>
