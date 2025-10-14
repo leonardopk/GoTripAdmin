@@ -7,15 +7,11 @@ import { IColumn } from '../../models/Interfaces/icolumn';
   templateUrl: './base-table.component.html',
   styleUrl: './base-table.component.scss'
 })
-export class BaseTableComponent implements OnInit {
+export class BaseTableComponent {
   @Input({ required: true }) dataList: any[] = [];
   @Input({ required: true }) displayedColumns: IColumn[] = []
 
   get displayedAllColumns() {
     return ['index', ...this.displayedColumns.map(c => c.field), 'actions']
-  }
-
-  ngOnInit(): void {
-    console.log(this.displayedAllColumns)
   }
 }

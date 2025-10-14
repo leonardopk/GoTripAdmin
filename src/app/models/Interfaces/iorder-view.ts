@@ -1,4 +1,4 @@
-export interface IBookingView {
+export interface IOrderView {
     customerName: string,
     activityName: string,
     numPeople: number,

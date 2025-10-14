@@ -1,7 +1,7 @@
 import { IActivity } from "./iactivity";
 import { ICustomer } from "./icustomer";
 
-export interface IBooking {
+export interface IOrder {
     customer: ICustomer,
     activity: IActivity,
     numPeople: number,

@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { ActivitiesListComponent } from './pages/activities/list/activities-list.component';
 import { ActivitiesFormComponent } from './pages/activities/form/activities-form.component';
-import { BookingsListComponent } from './pages/bookings/list/bookings-list.component';
-import { BookingsFormComponent } from './pages/bookings/form/bookings-form.component';
+import { OrdersListComponent } from './pages/bookings/list/orders-list.component';
+import { OrdersFormComponent } from './pages/bookings/form/orders-form.component';
 import { CustomersFormComponent } from './pages/customers/form/customers-form.component';
 import { CustomersListComponent } from './pages/customers/list/customers-list.component';
 import { FormViewComponent } from './shared/form-view/form-view.component';
@@ -33,8 +33,8 @@ import { BaseTableComponent } from './shared/base-table/base-table.component';
     App,
     ActivitiesListComponent,
     ActivitiesFormComponent,
-    BookingsListComponent,
-    BookingsFormComponent,
+    OrdersListComponent,
+    OrdersFormComponent,
     CustomersFormComponent,
     CustomersListComponent,
     FormViewComponent,
