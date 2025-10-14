@@ -27,6 +27,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormField } from '@angular/material/form-field';
 import { MatLabel } from '@angular/material/form-field';
 import { BaseTableComponent } from './shared/base-table/base-table.component';
+import { EquipmentsFormComponent } from './pages/equipments/form/equipments-form.component';
+import { EquipmentsListComponent } from './pages/equipments/list/equipments-list.component';
+import { OperatorsFormComponent } from './pages/operators/form/operators-form.component';
+import { OperatorsListComponent } from './pages/operators/list/operators-list.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,11 @@ import { BaseTableComponent } from './shared/base-table/base-table.component';
     OperationalsFormComponent,
     OperationalsListComponent,
     HomeComponent,
-    BaseTableComponent
+    BaseTableComponent,
+    EquipmentsFormComponent,
+    EquipmentsListComponent,
+    OperatorsFormComponent,
+    OperatorsListComponent
   ],
   imports: [
     BrowserModule,

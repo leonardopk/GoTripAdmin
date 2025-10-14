@@ -1,0 +1,11 @@
+<app-list-view
+    pageTitle="Operadores"
+    btnText="Novo Operador"
+    [dataListSource]="operators"
+    [nameColums]="[
+        {field: 'name', label: 'Nome'},
+        {field: 'cpf', label: 'CPF'},
+        {field: 'phone', label: 'Telefone'},
+        {field: 'email', label: 'E-mail'},
+    ]"
+></app-list-view>

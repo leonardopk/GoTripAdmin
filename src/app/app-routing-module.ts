@@ -8,6 +8,8 @@ import { ActivitiesListComponent } from './pages/activities/list/activities-list
 import { ProfileComponent } from './pages/profile/profile.component';
 import { OperationalsListComponent } from './pages/operationals/list/operationals-list.component';
 import { HomeComponent } from './pages/home/home.component';
+import { EquipmentsListComponent } from './pages/equipments/list/equipments-list.component';
+import { OperatorsListComponent } from './pages/operators/list/operators-list.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path: "users", component: UsersListComponent },
   { path: "activities", component: ActivitiesListComponent },
   { path: "profile", component: ProfileComponent },
-  { path: "operationals", component: OperationalsListComponent }
+  { path: "operationals", component: OperationalsListComponent },
+  { path: "equipments", component: EquipmentsListComponent },
+  { path: "operators", component: OperatorsListComponent }
 ];
 
 @NgModule({

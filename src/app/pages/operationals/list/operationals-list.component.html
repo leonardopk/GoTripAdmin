@@ -1,0 +1,12 @@
+<app-list-view
+    pageTitle="Operacionais"
+    btnText="Novo Operacional"
+    [dataListSource]="operationals"
+    [nameColums]="[
+        {field: 'date', label: 'Data'},
+        {field: 'hour', label: 'Hora'},
+        {field: 'activityName', label: 'Atividade'},
+        {field: 'operatorName', label: 'Operador'},
+        {field: 'equipmentName', label: 'Equipamento'}
+    ]"
+></app-list-view>
