@@ -16,9 +16,9 @@ export class BookingService {
     const activities = activityService.getActivities();
 
     this.bookings = [
-      {customer: customers[1], activity: activities[2], numPeople: 2},
-      {customer: customers[0], activity: activities[0], numPeople: 1},
-      {customer: customers[2], activity: activities[1], numPeople: 3},
+      {customer: customers[1], activity: activities[2], numPeople: 2, date: '2026-01-26T15:00:00Z'},
+      {customer: customers[0], activity: activities[0], numPeople: 1, date: '2025-11-12T16:00:00Z'},
+      {customer: customers[2], activity: activities[1], numPeople: 3, date: '2025-12-09T09:30:00Z'},
     ]
   }
 
@@ -31,7 +31,8 @@ export class BookingService {
       customerName: b.customer.name,
       activityName: b.activity.name,
       numPeople: b.numPeople,
-      total: b.activity.price * b.numPeople
+      total: b.activity.price * b.numPeople,
+      date: b.date
     }))
   }
 

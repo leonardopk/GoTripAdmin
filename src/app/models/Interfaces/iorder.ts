@@ -5,4 +5,5 @@ export interface IBooking {
     customer: ICustomer,
     activity: IActivity,
     numPeople: number,
+    date: string
 }
