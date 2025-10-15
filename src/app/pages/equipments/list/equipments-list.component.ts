@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IEquipment } from '../../../models/Interfaces/iequipment';
 import { EquipmentService } from '../../../services/equipment.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-equipments-list',
@@ -11,10 +12,14 @@ import { EquipmentService } from '../../../services/equipment.service';
 export class EquipmentsListComponent implements OnInit {
   equipments: IEquipment[] = [];
 
-  constructor (private equipmentService: EquipmentService) {}
+  constructor (private equipmentService: EquipmentService, private router: Router) {}
 
   ngOnInit(): void {
     this.equipments = this.equipmentService.getEquipments();
+  }
+
+  redirectToForm() {
+    this.router.navigate(['/equipments/new-equipment']);
   }
 
 }

@@ -10,17 +10,28 @@ import { OperationalsListComponent } from './pages/operationals/list/operational
 import { HomeComponent } from './pages/home/home.component';
 import { EquipmentsListComponent } from './pages/equipments/list/equipments-list.component';
 import { OperatorsListComponent } from './pages/operators/list/operators-list.component';
+import { OrdersFormComponent } from './pages/bookings/form/orders-form.component';
+import { OperationalsFormComponent } from './pages/operationals/form/operationals-form.component';
+import { EquipmentsFormComponent } from './pages/equipments/form/equipments-form.component';
+import { OperatorsFormComponent } from './pages/operators/form/operators-form.component';
+import { CustomersFormComponent } from './pages/customers/form/customers-form.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
+  { path: "activities", component: ActivitiesListComponent},
+  { path: "activities/new-activity", component: ActivitiesFormComponent},
   { path: "orders", component: OrdersListComponent },
+  { path: "orders/new-order", component: OrdersFormComponent },
   { path: "customers", component: CustomersListComponent },
-  { path: "users", component: UsersListComponent },
-  { path: "activities", component: ActivitiesListComponent },
-  { path: "profile", component: ProfileComponent },
+  { path: "customers/new-customer", component: CustomersFormComponent },
   { path: "operationals", component: OperationalsListComponent },
+  { path: "operationals/new-operational", component: OperationalsFormComponent },
   { path: "equipments", component: EquipmentsListComponent },
-  { path: "operators", component: OperatorsListComponent }
+  { path: "equipments/new-equipment", component: EquipmentsFormComponent },
+  { path: "operators", component: OperatorsListComponent },
+  { path: "operators/new-operator", component: OperatorsFormComponent },
+  { path: "users", component: UsersListComponent },
+  { path: "profile", component: ProfileComponent },
 ];
 
 @NgModule({

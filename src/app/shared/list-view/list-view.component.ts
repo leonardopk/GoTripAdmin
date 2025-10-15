@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IColumn } from '../../models/Interfaces/icolumn';
 
 @Component({
@@ -14,4 +14,11 @@ export class ListViewComponent {
 
   @Input({ required: true }) dataListSource: any[] = [];
   @Input({ required: true }) nameColums: IColumn[] = [];
+
+  @Output() btnClicked = new EventEmitter;
+
+  addBtnClicked() {
+    return this.btnClicked.emit();
+  }
+
 }

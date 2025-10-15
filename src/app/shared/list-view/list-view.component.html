@@ -18,7 +18,7 @@
             </div>
             <div class="btn-new-cont">
                 @if (showAddBtn) {
-                    <button  class="b-radius-10 btn-base">
+                    <button  class="b-radius-10 btn-base" (click)="addBtnClicked()">
                         <mat-icon>add</mat-icon>
                         {{ btnText }}
                     </button>
