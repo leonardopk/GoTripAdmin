@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { IOrder } from '../models/Interfaces/iorder';
 import { CustomerService } from './customer.service';
 import { ActivityService } from './activity.service';
-import { IOrderView } from '../models/Interfaces/iorder-view';
+import { IOrder } from '../models/interfaces/iorder';
+import { IOrderView } from '../models/interfaces/iorder-view';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,7 @@ export class OrderService {
   private orders: IOrder[] = [];
 
   constructor (private customerService: CustomerService, private activityService: ActivityService) {
+
     const customers = customerService.getCustomers();
     const activities = activityService.getActivities();
 
@@ -34,6 +35,10 @@ export class OrderService {
       total: b.activity.price * b.numPeople,
       date: b.date
     }))
+  }
+
+  addOrder(order: IOrder) {
+    this.orders.push(order);
   }
 
 }

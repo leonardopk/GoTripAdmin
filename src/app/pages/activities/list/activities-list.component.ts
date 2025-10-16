@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IActivity } from '../../../models/Interfaces/iactivity';
-import { ActivityService } from '../../../services/activity.service';
+import { ActivityService } from '../../../core/services/activity.service';
 import { Router } from '@angular/router';
+import { IActivity } from '../../../core/models/interfaces/iactivity';
 
 @Component({
   selector: 'app-activities-list',

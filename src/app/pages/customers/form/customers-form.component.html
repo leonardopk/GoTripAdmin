@@ -1,1 +1,28 @@
-<p>customers-form works!</p>
+<form [formGroup]="form">
+    <app-form-view (addBtn)="formSubmited()" (cancelBtn)="formCancelled()">
+        <div class="input-field">
+            <label for="name">
+                Nome:
+                <input type="text" formControlName="name">
+            </label>
+        </div>
+        <div class="input-field">
+            <label for="cpf">
+                Cpf:
+                <input type="text" formControlName="cpf">
+            </label>
+        </div>
+        <div class="input-field">
+            <label for="email">
+                E-mail:
+                <input type="email" formControlName="email">
+            </label>
+        </div>
+        <div class="input-field">
+            <label for="birthday">
+                Data de Nascimento:
+                <input type="date" formControlName="birthday">
+            </label>
+        </div>
+    </app-form-view>
+</form>

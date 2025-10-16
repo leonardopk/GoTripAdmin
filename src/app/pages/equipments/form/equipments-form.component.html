@@ -1,1 +1,10 @@
-<p>equipments-form works!</p>
+<form [formGroup]="form">
+    <app-form-view (addBtn)="formSubmited()" (cancelBtn)="formCancelled()">
+        <div class="input-field">
+            <label for="name">
+                Nome:
+                <input type="text" formControlName="name">
+            </label>
+        </div>
+    </app-form-view>
+</form>

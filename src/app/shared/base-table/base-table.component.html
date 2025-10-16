@@ -17,6 +17,12 @@
                 } @else if (column.field === 'hour') {
                     {{ element[column.field] | date : 'HH:mm' : 'UTC' }}
 
+                } @else if (column.field === 'cpf') {
+                    {{ element[column.field] | cpftransform }}
+
+                } @else if (column.field === 'phone') {
+                    {{ element[column.field] | phoneTransform }}
+
                 } @else {
                     {{ element[column.field] }} 
                 }

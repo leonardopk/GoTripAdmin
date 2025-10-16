@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,14 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrl: './form-view.component.scss'
 })
 export class FormViewComponent {
+  @Output() cancelBtn = new EventEmitter;
+  @Output() addBtn = new EventEmitter;
 
- 
+  cancelBtnClicked() {
+    this.cancelBtn.emit();
+  }
+  
+  addBtnClicked() {
+    this.addBtn.emit();
+  }
 }

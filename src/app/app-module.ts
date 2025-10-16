@@ -12,7 +12,6 @@ import { CustomersListComponent } from './pages/customers/list/customers-list.co
 import { FormViewComponent } from './shared/form-view/form-view.component';
 import { ListViewComponent } from './shared/list-view/list-view.component';
 import { UsersListComponent } from './pages/users/list/users-list.component';
-import { UsersFormComponent } from './pages/users/form/users-form.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -32,6 +31,9 @@ import { EquipmentsListComponent } from './pages/equipments/list/equipments-list
 import { OperatorsFormComponent } from './pages/operators/form/operators-form.component';
 import { OperatorsListComponent } from './pages/operators/list/operators-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { CpftransformPipe } from './core/pipes/cpftransform.pipe';
+import { PhoneTransformPipe } from './core/pipes/phone-transform.pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormViewComponent,
     ListViewComponent,
     UsersListComponent,
-    UsersFormComponent,
     SidebarComponent,
     HeaderComponent,
     ProfileComponent,
@@ -56,7 +57,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     EquipmentsFormComponent,
     EquipmentsListComponent,
     OperatorsFormComponent,
-    OperatorsListComponent
+    OperatorsListComponent,
+    CpftransformPipe,
+    PhoneTransformPipe,
   ],
   imports: [
     BrowserModule,
@@ -68,10 +71,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTableModule,
     MatFormField,
     MatLabel,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideNgxMask()
   ],
   bootstrap: [App]
 })

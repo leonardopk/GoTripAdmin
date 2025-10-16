@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { IOperational } from '../models/Interfaces/ioperational';
-import { OrderService } from './order.service';
-import { OperatorService } from './operator.service';
 import { EquipmentService } from './equipment.service';
-import { IOperationalView } from '../models/Interfaces/ioperational-view';
+import { IOperational } from '../models/interfaces/ioperational';
+import { IOperationalView } from '../models/interfaces/ioperational-view';
+import { OperatorService } from './operator.service';
+import { OrderService } from './order.service';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +38,10 @@ export class OperationalService {
       equipmentName: b.equipment.name,
       operatorName: b.operator.name
     })) 
+  }
+
+  addOperational(operational: IOperational) {
+    this.operationals.push(operational);
   }
 
 }

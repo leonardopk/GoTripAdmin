@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivityService } from '../../../services/activity.service';
+import { ActivityService } from '../../../core/services/activity.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-activities-form',
@@ -11,7 +12,7 @@ import { ActivityService } from '../../../services/activity.service';
 export class ActivitiesFormComponent implements OnInit {
   form!: FormGroup;
 
-  constructor (private fb: FormBuilder, private activityService: ActivityService) {}
+  constructor (private fb: FormBuilder, private activityService: ActivityService, private router: Router) {}
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -21,6 +22,13 @@ export class ActivitiesFormComponent implements OnInit {
   }
 
   formSubmited() {
-    this.activityService.addActivity(this.form.value)
+    if (this.form.valid) {
+      this.activityService.addActivity(this.form.value)
+      this.router.navigate(['/activities'])
+    }
+  }
+
+  formCancelled() {
+    this.router.navigate(['/activities'])
   }
 }

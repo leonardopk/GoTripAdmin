@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ICustomer } from '../models/Interfaces/icustomer';
+import { ICustomer } from '../models/interfaces/icustomer';
 
 @Injectable({
   providedIn: 'root'
@@ -13,5 +13,9 @@ export class CustomerService {
 
   getCustomers() {
     return this.customersList;
+  }
+
+  addCustomer(customer: ICustomer) {
+    this.customersList.push(customer);
   }
 }

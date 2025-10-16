@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IOperator } from '../../../models/Interfaces/ioperator';
-import { OperatorService } from '../../../services/operator.service';
+import { OperatorService } from '../../../core/services/operator.service';
 import { Router } from '@angular/router';
+import { IOperator } from '../../../core/models/interfaces/ioperator';
 
 @Component({
   selector: 'app-operators-list',

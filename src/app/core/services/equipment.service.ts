@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IEquipment } from '../models/Interfaces/iequipment';
+import { IEquipment } from '../models/interfaces/iequipment';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +18,10 @@ export class EquipmentService {
 
   getEquipments(): IEquipment[] {
     return this.equipmentsList;
+  }
+
+  addEquipment(equipment: IEquipment) {
+    this.equipmentsList.push(equipment);
   }
   
 }

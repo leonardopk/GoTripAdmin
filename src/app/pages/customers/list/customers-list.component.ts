@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ICustomer } from '../../../models/Interfaces/icustomer';
-import { CustomerService } from '../../../services/customer.service';
+import { CustomerService } from '../../../core/services/customer.service';
 import { Router } from '@angular/router';
+import { ICustomer } from '../../../core/models/interfaces/icustomer';
 
 @Component({
   selector: 'app-customers-list',

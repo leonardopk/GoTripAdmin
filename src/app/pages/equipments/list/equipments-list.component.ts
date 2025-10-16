@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IEquipment } from '../../../models/Interfaces/iequipment';
-import { EquipmentService } from '../../../services/equipment.service';
+import { EquipmentService } from '../../../core/services/equipment.service';
 import { Router } from '@angular/router';
+import { IEquipment } from '../../../core/models/interfaces/iequipment';
 
 @Component({
   selector: 'app-equipments-list',

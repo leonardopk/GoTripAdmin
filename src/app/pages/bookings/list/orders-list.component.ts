@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderService } from '../../../services/order.service';
-import { IOrderView } from '../../../models/Interfaces/iorder-view';
+import { OrderService } from '../../../core/services/order.service';
 import { Router } from '@angular/router';
+import { IOrderView } from '../../../core/models/interfaces/iorder-view';
 
 @Component({
   selector: 'app-orders-list',

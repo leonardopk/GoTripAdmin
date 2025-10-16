@@ -1,1 +1,36 @@
-<p>orders-form works!</p>
+<form [formGroup]="form">
+    <app-form-view (addBtn)="formSubmited()" (cancelBtn)="formCancelled()">
+        <div class="input-field">
+            <label for="customer">
+                Cliente:
+                <select name="customer" id="customer" formControlName="customer">
+                    @for (customer of customersList; track $index;) {
+                        <option [ngValue]="customer">{{customer.name}}</option>
+                    }
+                </select>
+            </label>
+        </div>
+        <div class="input-field">
+            <label for="activity">
+                Atividade:
+                <select name="activity" id="activity" formControlName="activity">
+                    @for (activity of activitiesList; track $index) {
+                        <option [ngValue]="activity">{{activity.name}}</option>
+                    }
+                </select>
+            </label>
+        </div>
+        <div class="input-field">
+            <label for="numPeople">
+                Número de Pessoas:
+                <input type="number" formControlName="numPeople">
+            </label>
+        </div>
+        <div class="input-field">
+            <label for="date">
+                Nome:
+                <input type="datetime-local" formControlName="date">
+            </label>
+        </div>
+    </app-form-view>
+</form>

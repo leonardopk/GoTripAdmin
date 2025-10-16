@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IOperationalView } from '../../../models/Interfaces/ioperational-view';
-import { OperationalService } from '../../../services/operational.service';
+import { OperationalService } from '../../../core/services/operational.service';
 import { Router } from '@angular/router';
+import { IOperationalView } from '../../../core/models/interfaces/ioperational-view';
 
 @Component({
   selector: 'app-operationals-list',
@@ -16,7 +16,6 @@ export class OperationalsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.operationals = this.operationalService.getOperationalsTableView();
-    console.log(this.operationals);
   }
 
   redirectToForm() {

@@ -1,1 +1,38 @@
-<p>operationals-form works!</p>
+<form [formGroup]="form">
+    <app-form-view (addBtn)="formSubmited()" (cancelBtn)="formCancelled()">
+
+        <div class="input-field">
+            <label for="order">
+                Pedido:
+                <select name="order" id="order" formControlName="order">
+                    @for (order of ordersList; track $index) {
+                        <option [ngValue]="order">Pedido {{$index}} - {{order.activity.name}} - {{order.customer.name}}</option>
+                    }
+                </select>
+            </label>
+        </div>
+
+        <div class="input-field">
+            <label for="operator">
+                Operador:
+                <select name="operator" id="operator" formControlName="operator">
+                    @for (operator of operatorsList; track $index) {
+                        <option [ngValue]="operator">{{operator.name}}</option>
+                    }
+                </select>
+            </label>
+        </div>
+
+        <div class="input-field">
+            <label for="equipment">
+                Equipamento:
+                <select name="equipment" id="equipment" formControlName="equipment">
+                    @for (equipment of equipmentsList; track $index) {
+                        <option [ngValue]="equipment">{{equipment.name}}</option>
+                    }
+                </select>
+            </label>
+        </div>
+        
+    </app-form-view>
+</form>

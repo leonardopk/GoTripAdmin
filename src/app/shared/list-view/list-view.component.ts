@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { IColumn } from '../../models/Interfaces/icolumn';
+import { IColumn } from '../../core/models/interfaces/icolumn';
 
 @Component({
   selector: 'app-list-view',
