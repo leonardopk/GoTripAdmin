@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form-view',
@@ -8,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class FormViewComponent {
 
+ 
 }

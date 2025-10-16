@@ -17,4 +17,9 @@ export class ActivityService {
     return this.activitiesList;
   }
 
+  addActivity(activity: IActivity) {
+    this.activitiesList.push(activity);
+    console.log(activity)
+  }
+
 }

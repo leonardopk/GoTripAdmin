@@ -31,6 +31,7 @@ import { EquipmentsFormComponent } from './pages/equipments/form/equipments-form
 import { EquipmentsListComponent } from './pages/equipments/list/equipments-list.component';
 import { OperatorsFormComponent } from './pages/operators/form/operators-form.component';
 import { OperatorsListComponent } from './pages/operators/list/operators-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { OperatorsListComponent } from './pages/operators/list/operators-list.co
     RouterModule,
     MatTableModule,
     MatFormField,
-    MatLabel
+    MatLabel,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

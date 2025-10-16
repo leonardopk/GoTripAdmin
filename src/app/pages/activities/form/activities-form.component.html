@@ -1,1 +1,17 @@
-<p>activities-form works!</p>
+<form action="" [formGroup]="form" (ngSubmit)="formSubmited()">
+    <app-form-view>
+        <div class="input-field">
+            <label for="name">
+                Nome:
+                <input type="name" formControlName="name">
+            </label>
+        </div>
+        <div class="input-field">
+            <label for="price">
+                Valor:
+                <input type="number" formControlName="price">
+            </label>
+        </div>
+        <button type="submit">Enviar</button>
+    </app-form-view>
+</form>
