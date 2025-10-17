@@ -16,7 +16,7 @@ export class CustomersFormComponent {
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       cpf: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       birthday: ['', Validators.required]
     })
   }
@@ -25,6 +25,9 @@ export class CustomersFormComponent {
     if (this.form.valid) {
       this.customerService.addCustomer(this.form.value);
       this.router.navigate(['/customers'])
+    }
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
     }
   }
 

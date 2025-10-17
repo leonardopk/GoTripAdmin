@@ -17,7 +17,7 @@ export class ActivitiesFormComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
-      price: ['', Validators.required]
+      price: ['', Validators.required],
     })
   }
 
@@ -25,6 +25,9 @@ export class ActivitiesFormComponent implements OnInit {
     if (this.form.valid) {
       this.activityService.addActivity(this.form.value)
       this.router.navigate(['/activities'])
+    }
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
     }
   }
 

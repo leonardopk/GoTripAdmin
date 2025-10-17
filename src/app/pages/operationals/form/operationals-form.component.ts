@@ -49,6 +49,9 @@ export class OperationalsFormComponent {
       this.operationalService.addOperational(this.form.value)
       this.router.navigate(['/operationals'])
     }
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+    }
   }
 
 }

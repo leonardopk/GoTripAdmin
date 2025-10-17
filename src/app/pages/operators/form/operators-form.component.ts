@@ -27,6 +27,9 @@ export class OperatorsFormComponent {
       this.operatorService.addOperator(this.form.value)
       this.router.navigate(['/operators'])
     }
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+    }
   }
 
   formCancelled() {

@@ -31,3 +31,82 @@
 .form-area-container .row-2 {
     margin: 20px 0 20px 0;
 }
+
+.form-actions {
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+}
+
+.form-actions button {
+    padding: 15px 15px;
+    cursor: pointer;
+}
+
+.btn-add {
+    background-color: #465FFF;
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: #3641F5;
+}
+
+.btn-cancel {
+    background-color: white;
+    border: 1px solid rgba(110, 110, 110, 0.192);
+}
+
+.btn-cancel:hover {
+    background-color: rgb(241, 241, 241)
+}
+
+// Inputs dos formulários
+.form-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+}
+
+:host ::ng-deep .input-field {
+  margin-bottom: 30px;
+}
+
+:host ::ng-deep .input-field label {
+  display: flex;
+  flex-direction: column;
+}
+
+:host ::ng-deep .input-field label span {
+    font-weight: 600;
+    font-size: 14px;
+    color: #344054;
+}
+
+:host ::ng-deep .input-field input {
+    border-radius: 10px;
+    border: 1px solid rgba(110, 110, 110, 0.315);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.055);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #344054;
+}
+
+:host ::ng-deep .input-field select {
+    border-radius: 10px;
+    border: 1px solid rgba(110, 110, 110, 0.315);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.055);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #344054;
+}
+
+:host ::ng-deep .input-field .error {
+    color: red;
+}

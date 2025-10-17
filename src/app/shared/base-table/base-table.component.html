@@ -23,6 +23,9 @@
                 } @else if (column.field === 'phone') {
                     {{ element[column.field] | phoneTransform }}
 
+                } @else if (column.field === 'price' || column.field === 'total') {
+                    {{ element[column.field] | currency : 'BRL'}}
+
                 } @else {
                     {{ element[column.field] }} 
                 }

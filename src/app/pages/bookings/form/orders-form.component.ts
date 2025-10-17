@@ -31,7 +31,7 @@ export class OrdersFormComponent {
     this.form = this.fb.group({
       customer: ['', Validators.required],
       activity: ['', Validators.required],
-      numPeople: ['', Validators.required],
+      numPeople: ['', [Validators.required, Validators.min(1)]],
       date: ['', Validators.required]
     })
   }
@@ -40,6 +40,9 @@ export class OrdersFormComponent {
     if (this.form.valid) {
       this.orderService.addOrder(this.form.value);
       this.router.navigate(['/orders']);
+    }
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
     }
   }
   

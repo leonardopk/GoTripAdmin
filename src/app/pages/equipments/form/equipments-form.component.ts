@@ -15,7 +15,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
     constructor(private equipmentService: EquipmentService, private router: Router, private fb: FormBuilder) {
       this.form = this.fb.group({
-        name: ['', Validators.required]
+        name: ['', [Validators.required, Validators.minLength(3)]]
       })
     }
     
@@ -23,6 +23,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
       if (this.form.valid) {
         this.equipmentService.addEquipment(this.form.value);
         this.router.navigate(['/equipments']);
+      }
+      if (this.form.invalid) {
+        this.form.markAllAsTouched();
       }
     }
 
