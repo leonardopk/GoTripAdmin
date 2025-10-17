@@ -1,5 +1,6 @@
 <form [formGroup]="form">
     <app-form-view (addBtn)="formSubmited()" (cancelBtn)="formCancelled()">
+        
         <div class="input-field">
             <label for="customer">
                 <span>Cliente</span>
@@ -31,7 +32,7 @@
         <div class="input-field">
             <label for="numPeople">
                 <span>Número de Pessoas</span>
-                <input type="number" formControlName="numPeople">
+                <input type="number" formControlName="numPeople" placeholder="0">
             </label>
             @if (form.get('numPeople')?.touched && form.get('numPeople')?.hasError('required') ) {
                 <div class="error">Este campo é obrigatório.</div>

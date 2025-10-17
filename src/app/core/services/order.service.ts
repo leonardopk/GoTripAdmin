@@ -41,4 +41,10 @@ export class OrderService {
     this.orders.push(order);
   }
 
+  removeOrder(orderView: IOrderView) {
+    this.orders = this.orders.filter(
+        or => or.activity.name !== orderView.activityName
+      )
+  }
+
 }

@@ -3,7 +3,7 @@
         <div class="input-field">
             <label for="name">
                 <span>Nome</span>
-                <input type="text" formControlName="name">
+                <input type="text" formControlName="name" placeholder="Nome Completo">
             </label>
             @if (form.get('name')?.touched && form.get('name')?.hasError('minlength') ) {
                 <div class="error">O nome deve conter pelo menos 3 letras.</div>

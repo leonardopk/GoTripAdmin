@@ -22,4 +22,8 @@ export class ActivityService {
     console.log(activity)
   }
 
+  removeActivity(activity: IActivity) {
+    this.activitiesList = this.activitiesList.filter(a => a !== activity);
+  }
+
 }

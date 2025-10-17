@@ -22,4 +22,9 @@ export class CustomersListComponent implements OnInit {
     this.router.navigate(['/customers/new-customer'])
   }
 
+  removeItem(customer: ICustomer) {
+    this.customerService.removeCustomer(customer);
+    this.customers = this.customerService.getCustomers();
+  }
+
 }

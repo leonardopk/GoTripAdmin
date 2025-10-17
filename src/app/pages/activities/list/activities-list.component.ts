@@ -23,4 +23,9 @@ export class ActivitiesListComponent implements OnInit {
     this.router.navigate(['/activities/new-activity'])
   }
 
+  removeItem(activity: IActivity) {
+    this.activityService.removeActivity(activity);
+    this.activities = this.activityService.getActivities();
+  }
+
 }

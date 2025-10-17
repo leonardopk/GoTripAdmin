@@ -4,7 +4,7 @@
         <div class="input-field">
             <label for="name">
                 <span>Nome</span>
-                <input type="text" formControlName="name">
+                <input type="text" formControlName="name" placeholder="Nome Completo">
             </label>
             @if (form.get('name')?.touched && form.get('name')?.hasError('minlength') ) {
                 <div class="error">O nome deve conter pelo menos 3 letras.</div>
@@ -16,8 +16,8 @@
 
         <div class="input-field">
             <label for="cpf">
-                <span>Cpf</span>
-                <input type="text" formControlName="cpf" mask="000.000.000-00">
+                <span>CPF</span>
+                <input type="text" formControlName="cpf" mask="000.000.000-00" placeholder="000.000.000-00">
             </label>
             @if (form.get('cpf')?.touched && form.get('cpf')?.hasError('required') ) {
                 <div class="error">Este campo é obrigatório.</div>
@@ -27,7 +27,7 @@
         <div class="input-field">
             <label for="email">
                 <span>E-mail</span>
-                <input type="email" formControlName="email">
+                <input type="email" formControlName="email" placeholder="exemplo@email.com">
             </label>
             @if (form.get('email')?.touched && form.get('email')?.hasError('required') ) {
                 <div class="error">Este campo é obrigatório.</div>

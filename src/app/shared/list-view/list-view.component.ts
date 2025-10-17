@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IColumn } from '../../core/models/interfaces/icolumn';
+import { E } from '@angular/cdk/keycodes';
 
 @Component({
   selector: 'app-list-view',
@@ -8,6 +9,7 @@ import { IColumn } from '../../core/models/interfaces/icolumn';
   styleUrl: './list-view.component.scss'
 })
 export class ListViewComponent {
+
   @Input({ required: true }) pageTitle: String = '';
   @Input({ required: true }) btnText: String = '';
   @Input() showAddBtn: boolean = true;
@@ -16,9 +18,14 @@ export class ListViewComponent {
   @Input({ required: true }) nameColums: IColumn[] = [];
 
   @Output() btnClicked = new EventEmitter;
+  @Output() removeFromList = new EventEmitter;
 
   addBtnClicked() {
     return this.btnClicked.emit();
+  }
+
+  removeItem(element: Event) {
+    this.removeFromList.emit(element);
   }
 
 }

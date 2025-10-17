@@ -22,4 +22,9 @@ export class OrdersListComponent implements OnInit {
     this.router.navigate(['/orders/new-order'])
   }
 
+  removeItem(orderView: IOrderView) {
+    this.orderService.removeOrder(orderView);
+    this.orders = this.orderService.getOrdersTableView();
+  }
+
 }

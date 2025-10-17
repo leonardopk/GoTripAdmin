@@ -22,4 +22,9 @@ export class EquipmentsListComponent implements OnInit {
     this.router.navigate(['/equipments/new-equipment']);
   }
 
+  removeItem(equipment: IEquipment) {
+    this.equipmentService.removeEquipment(equipment);
+    this.equipments = this.equipmentService.getEquipments();
+  }
+
 }

@@ -20,5 +20,9 @@ export class OperatorService {
   addOperator(operator: IOperator) {
     this.operatorsList.push(operator);
   }
+
+  removeOperator(operator: IOperator) {
+    this.operatorsList = this.operatorsList.filter(a => a !== operator);
+  }
   
 }

@@ -44,4 +44,10 @@ export class OperationalService {
     this.operationals.push(operational);
   }
 
+  removeOperational(operationalView: IOperationalView) {
+    this.operationals = this.operationals.filter(
+      op => op.order.activity.name !== operationalView.activityName
+    );
+}
+
 }

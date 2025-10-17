@@ -4,7 +4,7 @@
         <div class="input-field">
             <label for="name">
                 <span>Nome</span>
-                <input type="text" formControlName="name">
+                <input type="text" formControlName="name" placeholder="Nome">
             </label>
 
             @if (form.get('name')?.touched && form.get('name')?.hasError('minlength')) {
@@ -17,7 +17,7 @@
         <div class="input-field">
             <label for="price">
                 <span>Valor</span>
-                <input type="number" formControlName="price">
+                <input type="number" formControlName="price" placeholder="000.00">
             </label>
         
             @if (form.get('price')?.touched && form.get('price')?.hasError('required')) {

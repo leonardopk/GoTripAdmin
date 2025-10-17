@@ -23,4 +23,9 @@ export class OperatorsListComponent implements OnInit {
     this.router.navigate(['/operators/new-operator'])
   }
 
+  removeItem(operator: IOperator) {
+    this.operatorsService.removeOperator(operator);
+    this.operators = this.operatorsService.getOperators();
+  }
+
 }

@@ -15,7 +15,7 @@
                     {{ element[column.field] | date : 'dd/MM/yyyy'}}
 
                 } @else if (column.field === 'hour') {
-                    {{ element[column.field] | date : 'HH:mm' : 'UTC' }}
+                    {{ element[column.field] | date : 'HH:mm' }}
 
                 } @else if (column.field === 'cpf') {
                     {{ element[column.field] | cpftransform }}
@@ -43,7 +43,7 @@
                     <mat-icon>edit_calendar</mat-icon>
                     Editar
                 </button>
-                <button class="btn-base b-radius-10 btn-remove">
+                <button class="btn-base b-radius-10 btn-remove" (click)="removeItem(element)">
                     <mat-icon>delete</mat-icon>
                     Remover
                 </button>    

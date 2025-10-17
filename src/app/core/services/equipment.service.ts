@@ -23,5 +23,9 @@ export class EquipmentService {
   addEquipment(equipment: IEquipment) {
     this.equipmentsList.push(equipment);
   }
+
+  removeEquipment(equipment: IEquipment) {
+    this.equipmentsList = this.equipmentsList.filter(a => a !== equipment);
+  }
   
 }

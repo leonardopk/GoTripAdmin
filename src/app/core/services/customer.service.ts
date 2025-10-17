@@ -18,4 +18,8 @@ export class CustomerService {
   addCustomer(customer: ICustomer) {
     this.customersList.push(customer);
   }
+
+  removeCustomer(customer: ICustomer) {
+    this.customersList = this.customersList.filter(a => a !== customer);
+  }
 }

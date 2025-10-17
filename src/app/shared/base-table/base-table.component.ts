@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IColumn } from '../../core/models/interfaces/icolumn';
 
 @Component({
@@ -10,8 +10,13 @@ import { IColumn } from '../../core/models/interfaces/icolumn';
 export class BaseTableComponent {
   @Input({ required: true }) dataList: any[] = [];
   @Input({ required: true }) displayedColumns: IColumn[] = []
+  @Output() remove = new EventEmitter;
 
   get displayedAllColumns() {
     return ['index', ...this.displayedColumns.map(c => c.field), 'actions']
+  }
+
+  removeItem(element: any) {
+    this.remove.emit(element);
   }
 }
