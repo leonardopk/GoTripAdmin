@@ -12,8 +12,10 @@ export class OperationalService {
 
   private operationals: IOperational[] = [];
   
-  constructor (private orderService: OrderService, private operatorService: OperatorService, private equipmentService: EquipmentService) {
+  constructor (private orderService: OrderService, private operatorService: OperatorService, private equipmentService: EquipmentService) {}
 
+  initializerOperationals() {
+    if (this.operationals.length > 0) return;
     const ordersList = this.orderService.getOrders();
     const operatorsList = this.operatorService.getOperators();
     const equipmentsList = this.equipmentService.getEquipments();
@@ -23,7 +25,6 @@ export class OperationalService {
       {order: ordersList[2], operator: operatorsList[1], equipment: equipmentsList[1]},
       {order: ordersList[1], operator: operatorsList[0], equipment: equipmentsList[6]},
     ]
-
   }
 
   getOperationals(): IOperational[] {

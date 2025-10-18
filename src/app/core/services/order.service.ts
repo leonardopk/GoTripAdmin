@@ -11,10 +11,12 @@ export class OrderService {
 
   private orders: IOrder[] = [];
 
-  constructor (private customerService: CustomerService, private activityService: ActivityService) {
+  constructor (private customerService: CustomerService, private activityService: ActivityService) {}
 
-    const customers = customerService.getCustomers();
-    const activities = activityService.getActivities();
+  initializeOrders() {
+    if (this.orders.length > 0) return;
+    const customers = this.customerService.getCustomers();
+    const activities = this.activityService.getActivities();
 
     this.orders = [
       {customer: customers[1], activity: activities[2], numPeople: 2, date: '2026-01-26T15:00:00Z'},
