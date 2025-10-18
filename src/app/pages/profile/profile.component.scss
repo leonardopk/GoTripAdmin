@@ -1,0 +1,151 @@
+.page-title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-title-container h1 {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.page-title-container ul {
+    display: flex;
+}
+
+.page-title-container ul li {
+    display: flex;
+    gap: 10px;
+}
+
+.page-title-container ul li span {
+    display: flex;
+    align-items: center;
+}
+
+.page-title-container ul li span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.page-title-container ul li mat-icon {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+
+.profile-area-container {
+    padding: 0 20px 0 20px;
+    background-color: white;
+    border: 1px solid rgba(110, 110, 110, 0.192);
+}
+
+.profile-area-container .row-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 20px 0;
+}
+
+.profile-area-container .row-1 .list-title h3 {
+    font-weight: 600;
+}
+
+.profile-area-container .row-2 {
+    margin: 20px 0 20px 0;
+}
+
+// Exclusivo desta página
+
+.gray {
+    color: #667088;
+}
+
+.block-info {
+    border: 1px solid rgba(110, 110, 110, 0.192);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding: 10px 0 10px 30px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.034);
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img img {
+    width: 80px;
+    border-radius: 50%;
+
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.profile-info-title .d-1 {
+    display: flex;
+    gap: 18px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.border-left {
+    border-left: 1px solid rgba(110, 110, 110, 0.192);
+    padding-left: 18px;
+}
+
+.info-data-cont span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.info-data-cont p {
+    font-weight: 500;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.inner-info-cont {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.media-info {
+
+}
+
+.media-info p {
+    margin: 0 0 10px 0;
+    font-weight: 500;
+}
+
+.media-info a {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.media-info a:hover {
+    text-decoration: underline;
+}
+
+.social-medias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
