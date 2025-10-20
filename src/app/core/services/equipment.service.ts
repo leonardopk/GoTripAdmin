@@ -27,5 +27,8 @@ export class EquipmentService {
   removeEquipment(equipment: IEquipment) {
     this.equipmentsList = this.equipmentsList.filter(a => a !== equipment);
   }
-  
+
+  editEquipment(index: number, equipment: IEquipment) {
+    this.equipmentsList[index] = equipment;
+  } 
 }

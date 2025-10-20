@@ -22,4 +22,8 @@ export class CustomerService {
   removeCustomer(customer: ICustomer) {
     this.customersList = this.customersList.filter(a => a !== customer);
   }
+
+  editCustomer(index: number, customer: ICustomer) {
+    this.customersList[index] = customer;
+  }
 }

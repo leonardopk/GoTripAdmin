@@ -49,4 +49,7 @@ export class OrderService {
       )
   }
 
+  editOrder(index: number, order: IOrder) {
+    this.orders[index] = order;
+  } 
 }

@@ -11,12 +11,15 @@ import { IOperational } from '../../../core/models/interfaces/ioperational';
   styleUrl: './operationals-list.component.scss'
 })
 export class OperationalsListComponent implements OnInit {
-  operationals: IOperationalView[] = [];
+  operationalsView: IOperationalView[] = [];
+  operationals: IOperational[] = [];
+
 
   constructor (private operationalService: OperationalService, private router: Router) {}
 
   ngOnInit(): void {
-    this.operationals = this.operationalService.getOperationalsTableView();
+    this.operationalsView = this.operationalService.getOperationalsTableView();
+    this.operationals = this.operationalService.getOperationals();
   }
 
   redirectToForm() {
@@ -25,6 +28,19 @@ export class OperationalsListComponent implements OnInit {
 
   removeItem(operationalView: IOperationalView) {
     this.operationalService.removeOperational(operationalView);
-    this.operationals = this.operationalService.getOperationalsTableView();
+    this.operationalsView = this.operationalService.getOperationalsTableView();
+  }
+
+  editItem(operationalView: IOperationalView) {
+    const index = this.operationals.findIndex(o =>
+    o.order.activity.name === operationalView.activityName &&
+    o.operator.name === operationalView.operatorName &&
+    o.equipment.name === operationalView.equipmentName &&
+    o.order.date === operationalView.date
+  );
+
+  if (index !== -1) {
+    this.router.navigate(['/operationals/edit', index]);
+  }
   }
 }

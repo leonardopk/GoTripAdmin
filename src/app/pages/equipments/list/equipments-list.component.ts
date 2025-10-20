@@ -27,4 +27,9 @@ export class EquipmentsListComponent implements OnInit {
     this.equipments = this.equipmentService.getEquipments();
   }
 
+  editItem(equipment: IEquipment) {
+    const index: number = this.equipments.indexOf(equipment);
+    this.router.navigate(['/equipments/edit/', index])
+  }
+
 }

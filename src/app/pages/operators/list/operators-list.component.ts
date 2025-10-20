@@ -28,4 +28,8 @@ export class OperatorsListComponent implements OnInit {
     this.operators = this.operatorsService.getOperators();
   }
 
+  editItem(operator: IOperator) {
+    const index: number = this.operators.indexOf(operator);
+    this.router.navigate(['/operators/edit/', index])
+  }
 }

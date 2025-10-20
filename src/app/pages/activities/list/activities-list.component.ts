@@ -28,4 +28,9 @@ export class ActivitiesListComponent implements OnInit {
     this.activities = this.activityService.getActivities();
   }
 
+  editItem(activity: IActivity) {
+    const index = this.activities.indexOf(activity);
+    this.router.navigate(['activities/edit/', index]);
+  }
+
 }

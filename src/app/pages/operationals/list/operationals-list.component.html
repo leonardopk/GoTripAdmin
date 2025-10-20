@@ -1,7 +1,7 @@
 <app-list-view
     pageTitle="Operacionais"
     btnText="Novo Operacional"
-    [dataListSource]="operationals"
+    [dataListSource]="operationalsView"
     [nameColums]="[
         {field: 'date', label: 'Data'},
         {field: 'hour', label: 'Hora'},
@@ -11,4 +11,5 @@
     ]"
     (btnClicked)="redirectToForm()"
     (removeFromList)="removeItem($event)"
+    (editFromList)="editItem($event)"
 ></app-list-view>

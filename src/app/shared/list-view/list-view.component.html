@@ -30,7 +30,7 @@
         </div>
         <div class="row-3">
 
-            <app-base-table [dataList]="dataListSource" [displayedColumns]="nameColums" (remove)="removeItem($event)"></app-base-table>
+            <app-base-table [dataList]="dataListSource" [displayedColumns]="nameColums" (remove)="removeItem($event)" (edit)="editItem($event)"></app-base-table>
 
         </div>
     </div>

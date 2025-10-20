@@ -27,4 +27,9 @@ export class CustomersListComponent implements OnInit {
     this.customers = this.customerService.getCustomers();
   }
 
+  editItem(customer: ICustomer) {
+    const index: number = this.customers.indexOf(customer);
+    this.router.navigate(['/customers/edit/', index])
+  }
+
 }

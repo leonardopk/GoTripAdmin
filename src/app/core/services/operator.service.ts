@@ -25,4 +25,7 @@ export class OperatorService {
     this.operatorsList = this.operatorsList.filter(a => a !== operator);
   }
   
+  editOperator(index: number, operator: IOperator) {
+    this.operatorsList[index] = operator;
+  } 
 }

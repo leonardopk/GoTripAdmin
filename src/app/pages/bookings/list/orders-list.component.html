@@ -1,7 +1,7 @@
 <app-list-view 
     pageTitle="Pedidos" 
     btnText="Novo Pedido" 
-    [dataListSource]="orders"
+    [dataListSource]="ordersView"
     [nameColums]="[
         {field: 'customerName', label: 'Cliente'},
         {field: 'activityName', label: 'Atividade'},
@@ -11,4 +11,5 @@
     ]"
     (btnClicked)="redirectToForm()"
     (removeFromList)="removeItem($event)"
+    (editFromList)="editItem($event)"
 ></app-list-view>

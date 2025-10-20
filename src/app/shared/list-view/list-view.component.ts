@@ -19,6 +19,7 @@ export class ListViewComponent {
 
   @Output() btnClicked = new EventEmitter;
   @Output() removeFromList = new EventEmitter;
+  @Output() editFromList = new EventEmitter;
 
   addBtnClicked() {
     return this.btnClicked.emit();
@@ -26,6 +27,10 @@ export class ListViewComponent {
 
   removeItem(element: Event) {
     this.removeFromList.emit(element);
+  }
+
+  editItem(element: Event) {
+    this.editFromList.emit(element);
   }
 
 }

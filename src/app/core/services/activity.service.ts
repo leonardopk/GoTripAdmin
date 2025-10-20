@@ -26,4 +26,8 @@ export class ActivityService {
     this.activitiesList = this.activitiesList.filter(a => a !== activity);
   }
 
+  editActivity(index: number, newActivity: IActivity) {
+    this.activitiesList[index] = newActivity;
+  }
+
 }

@@ -18,19 +18,33 @@ import { CustomersFormComponent } from './pages/customers/form/customers-form.co
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
+
   { path: "activities", component: ActivitiesListComponent},
   { path: "activities/new-activity", component: ActivitiesFormComponent},
+  { path: "activities/edit/:index", component: ActivitiesFormComponent },
+
   { path: "orders", component: OrdersListComponent },
   { path: "orders/new-order", component: OrdersFormComponent },
+  { path: "orders/edit/:index", component: OrdersFormComponent},
+
   { path: "customers", component: CustomersListComponent },
   { path: "customers/new-customer", component: CustomersFormComponent },
+  { path: "customers/edit/:index", component: CustomersFormComponent},
+
   { path: "operationals", component: OperationalsListComponent },
   { path: "operationals/new-operational", component: OperationalsFormComponent },
+  { path: "operationals/edit/:index", component: OperationalsFormComponent},
+
   { path: "equipments", component: EquipmentsListComponent },
   { path: "equipments/new-equipment", component: EquipmentsFormComponent },
+  { path: "equipments/edit/:index", component: EquipmentsFormComponent},
+
   { path: "operators", component: OperatorsListComponent },
   { path: "operators/new-operator", component: OperatorsFormComponent },
+  { path: "operators/edit/:index", component: OperatorsFormComponent},
+
   { path: "users", component: UsersListComponent },
+
   { path: "profile", component: ProfileComponent },
 ];
 

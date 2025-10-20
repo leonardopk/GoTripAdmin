@@ -11,6 +11,7 @@ export class BaseTableComponent {
   @Input({ required: true }) dataList: any[] = [];
   @Input({ required: true }) displayedColumns: IColumn[] = []
   @Output() remove = new EventEmitter;
+  @Output() edit = new EventEmitter;
 
   get displayedAllColumns() {
     return ['index', ...this.displayedColumns.map(c => c.field), 'actions']
@@ -18,5 +19,9 @@ export class BaseTableComponent {
 
   removeItem(element: any) {
     this.remove.emit(element);
+  }
+
+  editItem(element: any) {
+    this.edit.emit(element);
   }
 }

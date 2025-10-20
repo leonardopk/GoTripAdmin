@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../../../core/services/order.service';
 import { Router } from '@angular/router';
 import { IOrderView } from '../../../core/models/interfaces/iorder-view';
+import { IOrder } from '../../../core/models/interfaces/iorder';
 
 @Component({
   selector: 'app-orders-list',
@@ -10,12 +11,14 @@ import { IOrderView } from '../../../core/models/interfaces/iorder-view';
   styleUrl: './orders-list.component.scss'
 })
 export class OrdersListComponent implements OnInit {
-  orders: IOrderView[] = [];
+  ordersView: IOrderView[] = [];
+  orders: IOrder[] = [];
 
   constructor (private orderService: OrderService, private router: Router) {}
 
   ngOnInit(): void {
-    this.orders = this.orderService.getOrdersTableView();
+    this.ordersView = this.orderService.getOrdersTableView();
+    this.orders = this.orderService.getOrders();
   }
 
   redirectToForm() {
@@ -24,7 +27,19 @@ export class OrdersListComponent implements OnInit {
 
   removeItem(orderView: IOrderView) {
     this.orderService.removeOrder(orderView);
-    this.orders = this.orderService.getOrdersTableView();
+    this.ordersView = this.orderService.getOrdersTableView();
+  }
+
+  editItem(orderView: IOrderView) {
+    const index = this.orders.findIndex(o =>
+    o.customer.name === orderView.customerName &&
+    o.activity.name === orderView.activityName &&
+    o.date === orderView.date
+  );
+
+  if (index !== -1) {
+    this.router.navigate(['/orders/edit', index]);
+  };
   }
 
 }
