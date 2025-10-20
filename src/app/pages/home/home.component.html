@@ -1,1 +1,35 @@
-<p>home works!</p>
+<div class="cont-container">
+    <h2>Home</h2>
+    <div class="grid-container b-radius-20">
+        <app-card 
+            cardText="Operacionais"
+            cardIcon="list_alt"
+            [data]="qtd_operationals"
+        ></app-card>
+        <app-card 
+            cardText="Pedidos"
+            cardIcon="shopping_cart"
+            [data]="qtd_orders"
+        ></app-card>
+        <app-card 
+            cardText="Clientes"
+            cardIcon="group"
+            [data]="qtd_customers"
+        ></app-card>
+        <app-card 
+            cardText="Atividades"
+            cardIcon="hiking"
+            [data]="qtd_activities"
+        ></app-card>
+        <app-card 
+            cardText="Equipamentos"
+            cardIcon="snowmobile"
+            [data]="qtd_equipments"
+        ></app-card>
+        <app-card 
+            cardText="Operadores"
+            cardIcon="engineering"
+            [data]="qtd_operators"
+        ></app-card>
+    </div>
+</div>

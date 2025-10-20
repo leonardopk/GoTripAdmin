@@ -34,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { CpftransformPipe } from './core/pipes/cpftransform.pipe';
 import { PhoneTransformPipe } from './core/pipes/phone-transform.pipe';
+import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { PhoneTransformPipe } from './core/pipes/phone-transform.pipe';
     OperatorsListComponent,
     CpftransformPipe,
     PhoneTransformPipe,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

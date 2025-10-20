@@ -1,0 +1,13 @@
+.cont-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.grid-container {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgba(110, 110, 110, 0.192);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
