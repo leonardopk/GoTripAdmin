@@ -1,0 +1,56 @@
+<form [formGroup]="form">
+    <app-form-view (addBtn)="formSubmited()" (cancelBtn)="formCancelled()">
+        
+        <div class="input-field">
+            <label for="customer">
+                <span>Cliente</span>
+                <select name="customer" id="customer" formControlName="customer">
+                    @for (customer of customersList; track $index;) {
+                        <option [ngValue]="customer">{{customer.name}}</option>
+                    }
+                </select>
+            </label>
+            @if (form.get('customer')?.touched && form.get('customer')?.hasError('required')) {
+                <div class="error">Este campo é obrigatório.</div>
+            }
+        </div>
+
+        <div class="input-field">
+            <label for="activity">
+                <span>Atividade</span>
+                <select name="activity" id="activity" formControlName="activity">
+                    @for (activity of activitiesList; track $index) {
+                        <option [ngValue]="activity">{{activity.name}}</option>
+                    }
+                </select>
+            </label>
+            @if (form.get('activity')?.touched && form.get('activity')?.hasError('required')) {
+                <div class="error">Este campo é obrigatório.</div>
+            }
+        </div>
+
+        <div class="input-field">
+            <label for="numPeople">
+                <span>Número de Pessoas</span>
+                <input type="number" formControlName="numPeople" placeholder="0">
+            </label>
+            @if (form.get('numPeople')?.touched && form.get('numPeople')?.hasError('required') ) {
+                <div class="error">Este campo é obrigatório.</div>
+            }
+            @if (form.get('numPeople')?.touched && form.get('numPeople')?.hasError('min') ) {
+                <div class="error">Você deve adicionar pelo menos uma pessoa no pedido.</div>
+            }
+        </div>
+
+        <div class="input-field">
+            <label for="date">
+                <span>Data e Hora</span>
+                <input type="datetime-local" formControlName="date">
+            </label>
+            @if (form.get('date')?.touched && form.get('date')?.hasError('required') ) {
+                <div class="error">Este campo é obrigatório.</div>
+            }
+        </div>
+
+    </app-form-view>
+</form>

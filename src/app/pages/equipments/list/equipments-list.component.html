@@ -1,0 +1,11 @@
+<app-list-view
+    pageTitle="Equipamentos"
+    btnText="Novo Equipamento"
+    [dataListSource]="equipments"
+    [nameColums]="[
+        {field: 'name', label: 'Nome'}
+    ]"
+    (btnClicked)="redirectToForm()"
+    (removeFromList)="removeItem($event)"
+    (editFromList)="editItem($event)"
+></app-list-view>

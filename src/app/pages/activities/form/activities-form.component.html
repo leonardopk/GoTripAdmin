@@ -1,0 +1,29 @@
+<form [formGroup]="form">
+    <app-form-view (addBtn)="formSubmited()" (cancelBtn)="formCancelled()">
+        
+        <div class="input-field">
+            <label for="name">
+                <span>Nome</span>
+                <input type="text" formControlName="name" placeholder="Nome">
+            </label>
+
+            @if (form.get('name')?.touched && form.get('name')?.hasError('minlength')) {
+                <div class="error">O nome precisa ter ao menos 3 letras.</div>
+            } @else if (form.get('name')?.touched && form.get('name')?.hasError('required') ) {
+                <div class="error">O campo nome é obrigatório.</div>
+            }
+        </div>
+        
+        <div class="input-field">
+            <label for="price">
+                <span>Valor</span>
+                <input type="number" formControlName="price" placeholder="000.00">
+            </label>
+        
+            @if (form.get('price')?.touched && form.get('price')?.hasError('required')) {
+                <div class="error">O campo valor é obrigatório.</div>
+            }
+        </div>
+        
+    </app-form-view>
+</form>

@@ -1,0 +1,12 @@
+<app-list-view 
+    pageTitle="Atividades" 
+    btnText="Nova Atividade" 
+    [dataListSource]="activities" 
+    [nameColums]="[
+        {field: 'name', label: 'Nome'},
+        {field: 'price', label: 'Valor'},
+    ]"
+    (btnClicked)="redirectToForm()"
+    (removeFromList)="removeItem($event)"
+    (editFromList)="editItem($event)"
+></app-list-view>

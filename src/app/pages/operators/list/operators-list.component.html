@@ -1,0 +1,14 @@
+<app-list-view
+    pageTitle="Operadores"
+    btnText="Novo Operador"
+    [dataListSource]="operators"
+    [nameColums]="[
+        {field: 'name', label: 'Nome'},
+        {field: 'cpf', label: 'CPF'},
+        {field: 'phone', label: 'Telefone'},
+        {field: 'email', label: 'E-mail'},
+    ]"
+    (btnClicked)="redirectToForm()"
+    (removeFromList)="removeItem($event)"
+    (editFromList)="editItem($event)"
+></app-list-view>

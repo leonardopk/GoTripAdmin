@@ -1,0 +1,21 @@
+<div class="cont-container">
+    <div class="page-title-container">
+        <h1>Cadastrar X</h1>
+    </div>
+    <div class="form-area-container b-radius-20">
+        <div class="row-1">
+            <div class="form-title">
+                <h3>Preencha as informações</h3>
+            </div>
+        </div>
+        <div class="row-2">
+            <div class="form-fields">
+                <ng-content></ng-content>
+            </div>              
+            <div class="form-actions">
+                <button type="submit" (click)="addBtnClicked()" class="btn-base b-radius-10 btn-add">Cadastrar</button>
+                <button type="button" (click)="cancelBtnClicked()" class="btn-base b-radius-10 btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
