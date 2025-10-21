@@ -1,5 +1,23 @@
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: block;
+}
+
+.mat-elevation-z8 {
+    table-layout: auto; 
+}
+
 table {
     width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+  white-space: nowrap; /* impede quebra de linha nas células */
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .btn-actions-container {

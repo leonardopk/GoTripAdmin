@@ -32,3 +32,31 @@ mat-icon {
     font-size: 25px;
     font-weight: 400;
 }
+
+@media screen and (max-width: 1000px) {
+    mat-icon {
+        font-size: 40px;
+    }
+
+    .d2 h2 {
+        font-size: 20px;
+    }
+
+    .d2 h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    mat-icon {
+        font-size: 30px;
+    }
+
+    .d2 h2 {
+        font-size: 18px;
+    }
+
+    .d2 h3 {
+        font-size: 18px;
+    }
+}

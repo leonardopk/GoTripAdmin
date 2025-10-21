@@ -66,11 +66,28 @@
 
 .list-area-container .row-2 {
     margin: 20px 0 20px 0;
+    max-width: 480px;
 }
 
 .list-area-container .row-2 input {
-    width: 450px;
+    width: 90%;
     padding: 10px;
     border: 1px solid rgba(110, 110, 110, 0.192);
     font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 422px) {
+    .page-title-container {
+        flex-direction: column;
+    }
+
+    .page-title-container ul {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .row-1 {
+        flex-direction: column;
+    }
 }

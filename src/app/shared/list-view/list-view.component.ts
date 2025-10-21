@@ -11,7 +11,7 @@ import { E } from '@angular/cdk/keycodes';
 export class ListViewComponent {
 
   @Input({ required: true }) pageTitle: String = '';
-  @Input({ required: true }) btnText: String = '';
+  @Input() btnText: String = '';
   @Input() showAddBtn: boolean = true;
 
   @Input({ required: true }) dataListSource: any[] = [];
@@ -20,6 +20,7 @@ export class ListViewComponent {
   @Output() btnClicked = new EventEmitter;
   @Output() removeFromList = new EventEmitter;
   @Output() editFromList = new EventEmitter;
+  @Input() showBtnActions: boolean = true;
 
   addBtnClicked() {
     return this.btnClicked.emit();

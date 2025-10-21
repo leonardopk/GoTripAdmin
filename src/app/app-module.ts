@@ -35,6 +35,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { CpftransformPipe } from './core/pipes/cpftransform.pipe';
 import { PhoneTransformPipe } from './core/pipes/phone-transform.pipe';
 import { CardComponent } from './shared/card/card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { CardComponent } from './shared/card/card.component';
     MatLabel,
     ReactiveFormsModule,
     NgxMaskDirective,
-    NgxMaskPipe
+    NgxMaskPipe,
+    HttpClientModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

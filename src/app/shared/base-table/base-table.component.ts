@@ -12,9 +12,15 @@ export class BaseTableComponent {
   @Input({ required: true }) displayedColumns: IColumn[] = []
   @Output() remove = new EventEmitter;
   @Output() edit = new EventEmitter;
+  @Input() showBtnActions: boolean = true;
 
   get displayedAllColumns() {
-    return ['index', ...this.displayedColumns.map(c => c.field), 'actions']
+    if (this.showBtnActions) {
+      return ['index', ...this.displayedColumns.map(c => c.field), 'actions']
+    } else {
+      return ['index', ...this.displayedColumns.map(c => c.field)]
+    }
+    
   }
 
   removeItem(element: any) {

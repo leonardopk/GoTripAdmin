@@ -1,57 +1,62 @@
-<table mat-table [dataSource]="dataList" class="mat-elevation-z8">
+<div class="table-container">
+    <table mat-table [dataSource]="dataList" class="mat-elevation-z8">
 
-    <ng-container matColumnDef="index">
-            <th mat-header-cell *matHeaderCellDef> Index </th>
-            <td mat-cell *matCellDef="let element; let i = index"> {{ i }} </td>
-    </ng-container>
-    
-    @for (column of displayedColumns; track $index) {
-
-        <ng-container [matColumnDef]="column.field">
-            <th mat-header-cell *matHeaderCellDef> {{ column.label }} </th>
-            <td mat-cell *matCellDef="let element; let i = index"> 
-                
-                @if (column.field === 'date' || column.field === 'birthday') {
-                    {{ element[column.field] | date : 'dd/MM/yyyy'}}
-
-                } @else if (column.field === 'hour') {
-                    {{ element[column.field] | date : 'HH:mm' }}
-
-                } @else if (column.field === 'cpf') {
-                    {{ element[column.field] | cpftransform }}
-
-                } @else if (column.field === 'phone') {
-                    {{ element[column.field] | phoneTransform }}
-
-                } @else if (column.field === 'price' || column.field === 'total') {
-                    {{ element[column.field] | currency : 'BRL'}}
-
-                } @else {
-                    {{ element[column.field] }} 
-                }
-
-            </td>
+        <ng-container matColumnDef="index">
+                <th mat-header-cell *matHeaderCellDef> Index </th>
+                <td mat-cell *matCellDef="let element; let i = index"> {{ i }} </td>
         </ng-container>
+        
+        @for (column of displayedColumns; track $index) {
 
-    }
+            <ng-container [matColumnDef]="column.field">
+                <th mat-header-cell *matHeaderCellDef> {{ column.label }} </th>
+                <td mat-cell *matCellDef="let element; let i = index"> 
+                    
+                    @if (column.field === 'date' || column.field === 'birthday') {
+                        {{ element[column.field] | date : 'dd/MM/yyyy'}}
 
-    <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef class="actions-th"> Ações </th>
-        <td mat-cell *matCellDef="let element" class="actions-td">
-            <div class="btn-actions-container">
-                <button class="btn-base b-radius-10 btn-edit" (click)="editItem(element)">
-                    <mat-icon>edit_calendar</mat-icon>
-                    Editar
-                </button>
-                <button class="btn-base b-radius-10 btn-remove" (click)="removeItem(element)">
-                    <mat-icon>delete</mat-icon>
-                    Remover
-                </button>    
-            </div>
-        </td>
-    </ng-container>
+                    } @else if (column.field === 'hour') {
+                        {{ element[column.field] | date : 'HH:mm' }}
 
-    <tr mat-header-row *matHeaderRowDef="displayedAllColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedAllColumns;"></tr>
+                    } @else if (column.field === 'cpf') {
+                        {{ element[column.field] | cpftransform }}
 
-</table>
+                    } @else if (column.field === 'phone') {
+                        {{ element[column.field] | phoneTransform }}
+
+                    } @else if (column.field === 'price' || column.field === 'total') {
+                        {{ element[column.field] | currency : 'BRL'}}
+
+                    } @else {
+                        {{ element[column.field] }} 
+                    }
+
+                </td>
+            </ng-container>
+
+        }
+
+        @if (showBtnActions) {
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef class="actions-th"> Ações </th>
+                <td mat-cell *matCellDef="let element" class="actions-td">
+                    <div class="btn-actions-container">
+                        <button class="btn-base b-radius-10 btn-edit" (click)="editItem(element)">
+                            <mat-icon>edit_calendar</mat-icon>
+                            Editar
+                        </button>
+                        <button class="btn-base b-radius-10 btn-remove" (click)="removeItem(element)">
+                            <mat-icon>delete</mat-icon>
+                            Remover
+                        </button>    
+                    </div>
+                </td>
+            </ng-container>
+        }
+        
+
+        <tr mat-header-row *matHeaderRowDef="displayedAllColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedAllColumns;"></tr>
+
+    </table>
+</div>
