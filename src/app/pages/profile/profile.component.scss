@@ -126,10 +126,6 @@ p {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.media-info {
-
-}
-
 .media-info p {
     margin: 0 0 10px 0;
     font-weight: 500;
@@ -148,4 +144,41 @@ p {
 .social-medias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+    .social-medias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-medias .d-flex {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 738px) {
+    .social-medias {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .inner-info-cont {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .profile-info-title .d-1 {
+        flex-direction: column;
+    }
+
+    .profile-info-title .d-1 .border-left {
+        border-left: 0px;
+        padding-left: 0px;
+        margin-bottom: 15px;
+    }
+
+    .profile-info-title .d-1 p {
+        margin: 0;
+    }
 }
